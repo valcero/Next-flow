@@ -9,7 +9,7 @@ export default async function DashboardPage() {
   const { userId } = await auth();
   
   if (!userId) {
-    return null; // Handled by middleware
+    return null; 
   }
 
   const workflows = await prisma.workflow.findMany({
